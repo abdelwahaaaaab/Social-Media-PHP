@@ -95,7 +95,10 @@
         .forgot-password:hover {
             text-decoration: underline;
         }
-
+        input
+        {
+            color:black;
+        }
     </style>
 </head>
 <body>
@@ -113,6 +116,9 @@
         <label for="password">Repeat Password:</label>
         <input type="password" id="Rpassword" placeholder="Repeat Password" required>
 
+        <label for="image">Upload Image:</label>
+        <input type="file" id="image" placeholder="Upload Image" class="image">
+        
         <button type="submit" class="login-btn">Register</button>
 
         <a href="#" class="forgot-password">Do You Have An Account?</a>

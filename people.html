@@ -19,8 +19,8 @@
             justify-content: center;
             gap: 10px;
         }
-        .like-button,.comment-button {
-            background-color: #007bff65;
+        .like-button,.delete, .view {
+            background-color: green;
             color: white;
             border: none;
             padding: 10px 15px;
@@ -28,6 +28,9 @@
             cursor: pointer;
             border-radius: 5px;
             transition: 0.3s;
+        }
+        .view{
+            background-color: #007bff;
         }
         .like-button.liked {
             background-color: #007bff;
@@ -136,76 +139,11 @@
                     </li>
                 </ul>
                 <br>
-                <div class="info">
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam facere incidunt cupiditate et! Veniam, labore architecto fugit saepe ipsa, quidem odio doloremque, velit consequuntur eius recusandae beatae praesentium eveniet laudantium.</h3>
-                </div><br>
-                <div class="like-container">
-                    <button class="like-button" onclick="toggleLike(this)">👍 Like</button>
-                    <span class="like-count">0</span>
-                    <button class="comment-button" onclick="toggleCommentSection()">💬 Comment</button>
-                </div>
-                <div class="comment-section" style="display: none;">
-                    <input type="text" class="comment-input" placeholder="Write a comment..." style="color: black;">
-                    <button class="comment-button" onclick="addComment()">Post</button>
-                    <ul class="comment-list"></ul>
-                </div>
+                <button class="view">View</button>
+                <button class="delete">Connect</button>
+            
             </div>
-            <div class="data">
-                <div class="box">
-                    <ul>
-                        <li class="profile">
-                            <div class="photo">
-                                <img src="images/myphoto.jpg" alt="profile">
-                            </div>
-                            <h2>abdelwahab</h2>
-                        </li>
-                    </ul>
-                    <br>
-                    <div class="info">
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam facere incidunt cupiditate et! Veniam, labore architecto fugit saepe ipsa, quidem odio doloremque, velit consequuntur eius recusandae beatae praesentium eveniet laudantium.</h3>
-                    </div><br>
-                    <div class="like-container">
-                        <button class="like-button" onclick="toggleLike(this)">👍 Like</button>
-                        <span class="like-count">0</span>
-                        <button class="comment-button" onclick="toggleCommentSection()">💬 Comment</button>
-                    </div>
-                    <div class="comment-section" style="display: none;">
-                        <input type="text" class="comment-input" placeholder="Write a comment..." style="color: black;">
-                        <button class="comment-button" onclick="addComment()">Post</button>
-                        <ul class="comment-list"></ul>
-                    </div>
-                </div>
-        </div>
-        <script>
-            function toggleLike(button) {
-                let likeCountSpan = button.nextElementSibling;
-                let currentCount = parseInt(likeCountSpan.textContent);
-    
-                if (button.classList.contains("liked")) {
-                    likeCountSpan.textContent = currentCount - 1;
-                    button.classList.remove("liked");
-                } else {
-                    likeCountSpan.textContent = currentCount + 1;
-                    button.classList.add("liked");
-                }
-            }
-    
-            function toggleCommentSection() {
-                let commentSection = document.querySelector(".comment-section");
-                commentSection.style.display = commentSection.style.display === "none" ? "block" : "none";
-            }
-    
-            function addComment() {
-                let commentInput = document.querySelector(".comment-input");
-                let commentList = document.querySelector(".comment-list");
-    
-                if (commentInput.value.trim() !== "") {
-                    let newComment = document.createElement("li");
-                    newComment.textContent = commentInput.value;
-                    commentList.appendChild(newComment);
-                    commentInput.value = ""; // Clear input after posting
-                }
-            }
-        </script>
+            
+        
 </body>
 </html>
