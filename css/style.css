@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+body{
+    font-family:sans-serif;
+    background-color: #001;
+    display: flex;
+    gap: 5px;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.profile h2{
+    text-transform: capitalize;
+    font-size: 20px; 
+}
+.profile .photo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.profile .photo img{
+    width: 100%;
+}
+.header{
+    background-color: #123;
+}
+.menu{
+    padding: 8px;
+    width: 70px;
+    height: 100vb;
+    background-color: #123;
+    overflow: hidden;
+    transition: 1s;
+}
+.menu:hover{
+    width: 320px;
+}
+.menu ul{
+    /* background-color: red; */
+    height: 95%;
+    list-style: none;
+    position: relative;
+}
+ul li{
+    height: 9%;
+}
+ul li a{
+    /* display: block; */
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+    gap: 30px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    transition: 1s;
+    align-items: center;
+}
+ul li a:hover, .active{
+    background-color: #ffffff55;
+}
+ul li a i{
+    font-size: 25px;
+}
+ul .logout a{
+    background-color: red;
+    height: 50px;
+}
+.logout{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.content{
+    background-color: #001;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+}
+.content .header, .content .product{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    width: 100%;
+    background-color: #0481ff;
+    height: 50px;
+    border-radius: 12px;
+}
+.content .data{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    gap:10px;
+    align-items: center;
+}
+.content .data .box{
+    flex-basis: 100%;
+    background-color: #123;
+    flex-grow: 1;
+    padding: 5px;
+    border-radius: 12px;
+    align-items:flex-start;
+    transition: 1s;
+}
+
+.content .data .box i{font-size: 40px;}
+.content .data .box .info{text-align: center;}
+.content .data .box .info span{font-size: 40px;}
+.content table{
+    text-align: center;
+    padding-top: 5px;
+    width: 100%;
+    /* height: 100%; */
+    border-spacing: 5px;
+    transition: 1s;
+}
+.content table th, .content table td{
+    padding: 8px; 
+    background-color: #123;
+    border-radius: 8px;
+    transition: 1s;
+}
+.content table th{
+    background-color: #0481ff;
+}
+.content table .price, .content table .count{
+    padding: 5px;
+    border-radius: 8px;
+}
+.content table .price{
+    background-color: green;
+}
+.content table .count{
+    color:black;
+    background-color: gold;
+}
+/* Small Screen  */
+@media (min-width: 768px) {
+    
+    
+}
+/* Medium Screen  */
+@media (min-width: 992px) {
+    
+}
+/* Large Screen  */
+@media(min-width:1200px){
+    
+}
