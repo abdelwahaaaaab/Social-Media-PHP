@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__.'/database/users.php';
+$users = getAllUsers();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
